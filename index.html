@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PepsiCo Egypt — Crisis Management Case Study</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <style>
 /* ============================================
    DESIGN SYSTEM — PEPSI VISUAL LANGUAGE
@@ -810,6 +811,16 @@ h3.section-subtitle {
   z-index: 0;
   border-radius: 0;
 }
+#pepsi-can-3d {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.75;
+}
 .slide-img.inline {
   max-height: 180px;
   margin: 0;
@@ -869,7 +880,7 @@ h3.section-subtitle {
     <div class="bg-noise"></div>
     <div class="bg-gradient-bl"></div>
     <div class="bg-gradient-tr"></div>
-    <img src="img/hero-can.png" alt="Crushed Pepsi can" class="slide-img hero">
+    <canvas id="pepsi-can-3d"></canvas>
     <span class="slide-label reveal">Crisis Management Case Study</span>
     <h1 class="hero-title reveal" style="text-align:center;">PepsiCo<br>Egypt</h1>
     <div class="wave-divider reveal"></div>
@@ -1516,6 +1527,304 @@ h3.section-subtitle {
       diff > 0 ? goTo(current + 1) : goTo(current - 1);
     }
   });
+})();
+</script>
+
+<!-- ============ THREE.JS PEPSI CAN ============ -->
+<script>
+(() => {
+  const canvas = document.getElementById('pepsi-can-3d');
+  if (!canvas || typeof THREE === 'undefined') return;
+
+  const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  renderer.setClearColor(0x000000, 0);
+
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(40, 1, 0.1, 100);
+  camera.position.set(0, 0.3, 4.5);
+  camera.lookAt(0, -0.2, 0);
+
+  // Lighting
+  const ambientLight = new THREE.AmbientLight(0x334466, 0.6);
+  scene.add(ambientLight);
+  const keyLight = new THREE.DirectionalLight(0x1E90FF, 1.2);
+  keyLight.position.set(3, 4, 5);
+  scene.add(keyLight);
+  const rimLight = new THREE.PointLight(0xE32636, 0.8, 10);
+  rimLight.position.set(-3, 1, -2);
+  scene.add(rimLight);
+  const fillLight = new THREE.PointLight(0x0073CF, 0.5, 10);
+  fillLight.position.set(2, -2, 3);
+  scene.add(fillLight);
+
+  // === PEPSI CAN ===
+  const canGroup = new THREE.Group();
+  canGroup.rotation.z = 0.15;
+  canGroup.rotation.x = 0.1;
+  canGroup.position.y = -0.1;
+
+  // Can body
+  const canGeo = new THREE.CylinderGeometry(0.55, 0.55, 2.0, 48, 1, true);
+  const canvasTexture = document.createElement('canvas');
+  canvasTexture.width = 1024;
+  canvasTexture.height = 512;
+  const ctx = canvasTexture.getContext('2d');
+
+  // Draw Pepsi can texture
+  const grad = ctx.createLinearGradient(0, 0, 0, 512);
+  grad.addColorStop(0, '#003A7A');
+  grad.addColorStop(0.35, '#004B93');
+  grad.addColorStop(0.42, '#E32636');
+  grad.addColorStop(0.5, '#FFFFFF');
+  grad.addColorStop(0.58, '#E32636');
+  grad.addColorStop(0.65, '#004B93');
+  grad.addColorStop(1, '#002D5E');
+  ctx.fillStyle = grad;
+  ctx.fillRect(0, 0, 1024, 512);
+
+  // Pepsi circle logo
+  ctx.save();
+  ctx.beginPath();
+  ctx.arc(512, 256, 100, 0, Math.PI * 2);
+  ctx.fillStyle = '#004B93';
+  ctx.fill();
+  ctx.beginPath();
+  ctx.arc(512, 256, 90, 0, Math.PI * 2);
+  ctx.fillStyle = '#FFFFFF';
+  ctx.fill();
+  ctx.beginPath();
+  ctx.arc(512, 240, 90, Math.PI, 0);
+  ctx.fillStyle = '#E32636';
+  ctx.fill();
+  ctx.beginPath();
+  ctx.arc(512, 272, 90, 0, Math.PI);
+  ctx.fillStyle = '#004B93';
+  ctx.fill();
+  // Wavy divider
+  ctx.beginPath();
+  ctx.moveTo(422, 256);
+  ctx.bezierCurveTo(460, 230, 560, 280, 602, 256);
+  ctx.lineTo(602, 280);
+  ctx.bezierCurveTo(560, 256, 460, 306, 422, 280);
+  ctx.closePath();
+  ctx.fillStyle = '#FFFFFF';
+  ctx.fill();
+  ctx.restore();
+
+  // Metallic sheen
+  ctx.fillStyle = 'rgba(255,255,255,0.04)';
+  for (let i = 0; i < 1024; i += 4) {
+    ctx.fillRect(i, 0, 2, 512);
+  }
+
+  const texture = new THREE.CanvasTexture(canvasTexture);
+  texture.wrapS = THREE.RepeatWrapping;
+  const canMat = new THREE.MeshStandardMaterial({
+    map: texture,
+    metalness: 0.7,
+    roughness: 0.25,
+    side: THREE.DoubleSide
+  });
+  const canMesh = new THREE.Mesh(canGeo, canMat);
+  canGroup.add(canMesh);
+
+  // Can top/bottom
+  const capGeo = new THREE.CircleGeometry(0.55, 48);
+  const capMat = new THREE.MeshStandardMaterial({ color: 0xC0C0C0, metalness: 0.9, roughness: 0.15 });
+  const topCap = new THREE.Mesh(capGeo, capMat);
+  topCap.position.y = 1.0;
+  topCap.rotation.x = -Math.PI / 2;
+  canGroup.add(topCap);
+  const bottomCap = new THREE.Mesh(capGeo, capMat);
+  bottomCap.position.y = -1.0;
+  bottomCap.rotation.x = Math.PI / 2;
+  canGroup.add(bottomCap);
+
+  // Pull tab on top
+  const tabShape = new THREE.Shape();
+  tabShape.moveTo(-0.06, 0);
+  tabShape.lineTo(-0.04, 0.2);
+  tabShape.quadraticCurveTo(0, 0.28, 0.04, 0.2);
+  tabShape.lineTo(0.06, 0);
+  tabShape.closePath();
+  const tabGeo = new THREE.ShapeGeometry(tabShape);
+  const tabMat = new THREE.MeshStandardMaterial({ color: 0xD0D0D0, metalness: 0.95, roughness: 0.1, side: THREE.DoubleSide });
+  const tab = new THREE.Mesh(tabGeo, tabMat);
+  tab.position.set(0, 1.02, 0.08);
+  tab.rotation.x = -Math.PI / 2 + 0.6;
+  canGroup.add(tab);
+
+  // === HOLES with jagged dark rims ===
+  const holePositions = [
+    { angle: 0.8, y: 0.3, size: 0.1 },
+    { angle: 2.1, y: -0.1, size: 0.12 },
+    { angle: 3.5, y: 0.5, size: 0.08 },
+    { angle: 4.8, y: -0.4, size: 0.11 },
+    { angle: 5.5, y: 0.1, size: 0.09 },
+  ];
+
+  holePositions.forEach(h => {
+    const hx = Math.cos(h.angle) * 0.56;
+    const hz = Math.sin(h.angle) * 0.56;
+    // Dark hole crater
+    const holeSphere = new THREE.Mesh(
+      new THREE.SphereGeometry(h.size, 12, 12),
+      new THREE.MeshStandardMaterial({ color: 0x0a0a0a, metalness: 0.3, roughness: 0.9 })
+    );
+    holeSphere.position.set(hx, h.y, hz);
+    holeSphere.scale.z = 0.5;
+    holeSphere.lookAt(0, h.y, 0);
+    canGroup.add(holeSphere);
+
+    // Jagged metal rim ring
+    const rimGeo = new THREE.TorusGeometry(h.size, 0.015, 6, 16);
+    const rimMesh = new THREE.Mesh(rimGeo, new THREE.MeshStandardMaterial({
+      color: 0x888899, metalness: 0.9, roughness: 0.2
+    }));
+    rimMesh.position.set(hx, h.y, hz);
+    rimMesh.lookAt(0, h.y, 0);
+    canGroup.add(rimMesh);
+  });
+
+  scene.add(canGroup);
+
+  // === FIZZY PARTICLE SYSTEM ===
+  const PARTICLE_COUNT = 600;
+  const particleGeo = new THREE.BufferGeometry();
+  const positions = new Float32Array(PARTICLE_COUNT * 3);
+  const velocities = new Float32Array(PARTICLE_COUNT * 3);
+  const lifetimes = new Float32Array(PARTICLE_COUNT);
+  const sizes = new Float32Array(PARTICLE_COUNT);
+  const colors = new Float32Array(PARTICLE_COUNT * 3);
+
+  function resetParticle(i) {
+    const h = holePositions[Math.floor(Math.random() * holePositions.length)];
+    const hx = Math.cos(h.angle) * 0.58;
+    const hz = Math.sin(h.angle) * 0.58;
+    positions[i * 3]     = hx + (Math.random() - 0.5) * 0.06;
+    positions[i * 3 + 1] = h.y + (Math.random() - 0.5) * 0.06;
+    positions[i * 3 + 2] = hz + (Math.random() - 0.5) * 0.06;
+
+    const outX = Math.cos(h.angle);
+    const outZ = Math.sin(h.angle);
+    const sprayForce = 0.008 + Math.random() * 0.015;
+    velocities[i * 3]     = outX * sprayForce + (Math.random() - 0.5) * 0.004;
+    velocities[i * 3 + 1] = -0.003 - Math.random() * 0.008;
+    velocities[i * 3 + 2] = outZ * sprayForce + (Math.random() - 0.5) * 0.004;
+
+    lifetimes[i] = Math.random();
+    sizes[i] = 2 + Math.random() * 4;
+
+    // Color: mix of cola brown and fizzy white
+    const isFizz = Math.random() > 0.5;
+    if (isFizz) {
+      colors[i * 3]     = 0.85 + Math.random() * 0.15;
+      colors[i * 3 + 1] = 0.85 + Math.random() * 0.15;
+      colors[i * 3 + 2] = 0.8 + Math.random() * 0.2;
+    } else {
+      colors[i * 3]     = 0.25 + Math.random() * 0.15;
+      colors[i * 3 + 1] = 0.12 + Math.random() * 0.08;
+      colors[i * 3 + 2] = 0.05;
+    }
+  }
+
+  for (let i = 0; i < PARTICLE_COUNT; i++) resetParticle(i);
+
+  particleGeo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+  particleGeo.setAttribute('size', new THREE.BufferAttribute(sizes, 1));
+  particleGeo.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+
+  const particleMat = new THREE.PointsMaterial({
+    size: 0.03,
+    vertexColors: true,
+    transparent: true,
+    opacity: 0.7,
+    blending: THREE.AdditiveBlending,
+    depthWrite: false,
+    sizeAttenuation: true
+  });
+
+  const particles = new THREE.Points(particleGeo, particleMat);
+  canGroup.add(particles);
+
+  // === DRIP STREAMS (long thin meshes from each hole going down) ===
+  holePositions.forEach(h => {
+    const hx = Math.cos(h.angle) * 0.57;
+    const hz = Math.sin(h.angle) * 0.57;
+
+    const streamGeo = new THREE.CylinderGeometry(0.012, 0.004, 0.8 + Math.random() * 0.6, 6);
+    const streamMat = new THREE.MeshStandardMaterial({
+      color: 0x3D1A00,
+      transparent: true,
+      opacity: 0.45,
+      metalness: 0.1,
+      roughness: 0.8
+    });
+    const stream = new THREE.Mesh(streamGeo, streamMat);
+    stream.position.set(hx * 1.05, h.y - 0.5, hz * 1.05);
+    canGroup.add(stream);
+  });
+
+  // === PUDDLE at the bottom ===
+  const puddleGeo = new THREE.CircleGeometry(0.8, 32);
+  const puddleMat = new THREE.MeshStandardMaterial({
+    color: 0x2A0F00,
+    transparent: true,
+    opacity: 0.3,
+    metalness: 0.4,
+    roughness: 0.6
+  });
+  const puddle = new THREE.Mesh(puddleGeo, puddleMat);
+  puddle.rotation.x = -Math.PI / 2;
+  puddle.position.y = -1.6;
+  canGroup.add(puddle);
+
+  // === RESIZE ===
+  function resize() {
+    const rect = canvas.getBoundingClientRect();
+    renderer.setSize(rect.width, rect.height);
+    camera.aspect = rect.width / rect.height;
+    camera.updateProjectionMatrix();
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  // === ANIMATE ===
+  const clock = new THREE.Clock();
+  function animate() {
+    requestAnimationFrame(animate);
+    const dt = clock.getDelta();
+    const elapsed = clock.getElapsedTime();
+
+    // Slow rotation
+    canGroup.rotation.y = elapsed * 0.25;
+    // Gentle bob
+    canGroup.position.y = -0.1 + Math.sin(elapsed * 0.8) * 0.05;
+
+    // Update particles
+    const pos = particleGeo.attributes.position.array;
+    for (let i = 0; i < PARTICLE_COUNT; i++) {
+      lifetimes[i] -= dt * 0.4;
+      if (lifetimes[i] <= 0) {
+        resetParticle(i);
+        continue;
+      }
+      pos[i * 3]     += velocities[i * 3];
+      pos[i * 3 + 1] += velocities[i * 3 + 1];
+      pos[i * 3 + 2] += velocities[i * 3 + 2];
+      // Gravity
+      velocities[i * 3 + 1] -= 0.0002;
+    }
+    particleGeo.attributes.position.needsUpdate = true;
+
+    // Puddle pulse
+    puddle.scale.x = 0.9 + Math.sin(elapsed * 1.5) * 0.1;
+    puddle.scale.y = 0.9 + Math.cos(elapsed * 1.5) * 0.1;
+
+    renderer.render(scene, camera);
+  }
+  animate();
 })();
 </script>
 
