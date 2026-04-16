@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>PepsiCo Egypt — Crisis Management Case Study</title>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <style>
 /* ============================================
@@ -871,617 +872,562 @@ h3.section-subtitle {
 </style>
 </head>
 <body>
-
-<div class="deck" id="deck">
-
-  <!-- ==================== SLIDE 1: TITLE ==================== -->
-  <div class="slide slide-title-bg active" data-slide="0">
-    <div class="bg-globe"></div>
-    <div class="bg-noise"></div>
-    <div class="bg-gradient-bl"></div>
-    <div class="bg-gradient-tr"></div>
-    <canvas id="pepsi-can-3d"></canvas>
-    <span class="slide-label reveal">Crisis Management Case Study</span>
-    <h1 class="hero-title reveal" style="text-align:center;">PepsiCo<br>Egypt</h1>
-    <div class="wave-divider reveal"></div>
-    <p class="body-text reveal" style="text-align:center; max-width:600px;">
+<div class="deck" id="deck"><div class="slide active" data-slide="0">
+<div class="bg-globe"></div>
+<div class="bg-noise"></div>
+<div class="bg-gradient-bl"></div>
+<div class="bg-gradient-tr"></div>
+<canvas id="pepsi-can-3d"></canvas>
+<span class="slide-label reveal">Crisis Management Case Study</span>
+<h1 class="hero-title reveal" style="text-align:center;">PepsiCo<br/>Egypt</h1>
+<div class="wave-divider reveal"></div>
+<p class="body-text reveal" style="text-align:center; max-width:600px;">
       The 2023 Boycott Crisis — How a beverage giant navigated <strong>geopolitical turbulence</strong> in one of its most vital MENA markets
     </p>
-    <p class="reveal" style="margin-top:32px; font-family:var(--font-mono); font-size:12px; color:var(--pepsi-gray);">
-      ← → &nbsp; or click arrows to navigate
+<p class="reveal" style="margin-top:32px; font-family:var(--font-mono); font-size:12px; color:var(--pepsi-gray);">
+      ← →   or click arrows to navigate
     </p>
-  </div>
-
-  <!-- ==================== SLIDE 2: INTRODUCTION ==================== -->
-  <div class="slide" data-slide="1">
-    <div class="bg-noise"></div>
-    <div class="bg-gradient-bl"></div>
-    <img src="img/egypt-map.png" alt="Egypt boycott map" class="slide-img bg-visual">
-    <span class="slide-label reveal">01 — Introduction</span>
-    <h2 class="slide-title reveal">When a <span class="accent">Can of Pepsi</span><br>Became a Political Statement</h2>
-    <div class="wave-divider reveal"></div>
-    <p class="body-text reveal" style="text-align:center;">
+<div class="speaker-name" style="position: absolute; bottom: 30px; left: 40px; font-family: var(--font-mono); font-size: 14px; color: var(--pepsi-gold); font-weight: bold; z-index: 100;">Speaker: Janah</div></div><div class="slide" data-slide="1">
+<div class="bg-noise"></div>
+<div class="bg-gradient-bl"></div>
+<img alt="Egypt boycott map" class="slide-img bg-visual" src="img/egypt-map.png"/>
+<span class="slide-label reveal">01 — Introduction</span>
+<h2 class="slide-title reveal">When a <span class="accent">Can of Pepsi</span><br/>Became a Political Statement</h2>
+<div class="wave-divider reveal"></div>
+<p class="body-text reveal" style="text-align:center;">
       Following the escalation of the Israeli-Palestinian conflict in <strong>October 2023</strong>, Egyptian consumers launched a massive boycott against Western-affiliated brands. PepsiCo — despite decades of deep local roots through brands like <strong>Chipsy</strong> and <strong>7UP</strong> — found itself at the epicenter.
     </p>
-    <div class="stat-row reveal" style="margin-top:36px;">
-      <div class="stat-card">
-        <div class="stat-number">106M</div>
-        <div class="stat-label">Egyptian population with deep Palestinian solidarity</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number">72%</div>
-        <div class="stat-label">Internet penetration accelerating boycott virality</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number red">200K+</div>
-        <div class="stat-label">Retail outlets impacted by consumer behavioral shift</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ==================== SLIDE 3: TIMELINE ==================== -->
-  <div class="slide" data-slide="2">
-    <div class="bg-noise"></div>
-    <div class="bg-gradient-tr"></div>
-    <span class="slide-label reveal">02 — Crisis Timeline</span>
-    <h2 class="slide-title reveal">The <span class="accent">Domino Effect</span></h2>
-    <div class="wave-divider reveal"></div>
-    <div class="timeline reveal" style="margin-top:40px;">
-      <div class="timeline-item">
-        <div class="timeline-date">2018</div>
-        <div class="timeline-title">SodaStream Acquisition</div>
-        <div class="timeline-desc">PepsiCo acquires SodaStream for $3.2B — later cited as direct Israeli corporate link</div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-date">OCT 2023</div>
-        <div class="timeline-title">Crisis Ignites</div>
-        <div class="timeline-desc">Boycott lists go viral on TikTok, WhatsApp & X within hours of conflict escalation</div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-date">Q4 2023</div>
-        <div class="timeline-title">Sales Collapse</div>
-        <div class="timeline-desc">71% of surveyed consumers stopped purchasing PepsiCo products completely</div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-date">2024+</div>
-        <div class="timeline-title">Long-Tail Impact</div>
-        <div class="timeline-desc">62% remain "very unlikely" to repurchase — local brands fill the vacuum</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ==================== SLIDE 4: PESTLE ==================== -->
-  <div class="slide" data-slide="3">
-    <div class="bg-noise"></div>
-    <span class="slide-label reveal">03 — Macro Environment</span>
-    <h2 class="slide-title reveal"><span class="accent">PESTLE</span> Analysis</h2>
-    <div class="wave-divider reveal"></div>
-    <div class="pestle-grid reveal" style="margin-top:24px;">
-      <div class="pestle-card">
-        <span class="icon">🏛️</span>
-        <h4>Political</h4>
-        <p>Egypt maintained <strong>public neutrality</strong> while PepsiCo's SodaStream & Strauss Group ties made it a primary boycott target</p>
-      </div>
-      <div class="pestle-card">
-        <span class="icon">📉</span>
-        <h4>Economic</h4>
-        <p><strong>11% inflation</strong> & pound devaluation — consumers already strained, switching to cheaper local alternatives was effortless</p>
-      </div>
-      <div class="pestle-card">
-        <span class="icon">✊</span>
-        <h4>Social</h4>
-        <p>Young, digitally native population with <strong>deep Palestinian solidarity</strong> — boycotting became cultural identity</p>
-      </div>
-      <div class="pestle-card">
-        <span class="icon">📱</span>
-        <h4>Technological</h4>
-        <p>Boycott lists went <strong>viral in hours</strong> via TikTok, WhatsApp & X — outpacing any corporate response</p>
-      </div>
-      <div class="pestle-card">
-        <span class="icon">⚖️</span>
-        <h4>Legal</h4>
-        <p>No formal legislation banning products, but <strong>institutional backing</strong> of boycotts through unions and syndicates</p>
-      </div>
-      <div class="pestle-card">
-        <span class="icon">🌍</span>
-        <h4>Environmental</h4>
-        <p>Sustainability narratives weakened as consumers prioritized <strong>ethical sourcing over eco-claims</strong></p>
-      </div>
-    </div>
-  </div>
-
-  <!-- ==================== SLIDE 5: SWOT ==================== -->
-  <div class="slide" data-slide="4">
-    <div class="bg-noise"></div>
-    <div class="bg-gradient-bl"></div>
-    <img src="img/swot-compass.png" alt="SWOT Compass" class="slide-img bg-visual" style="opacity:0.08;">
-    <span class="slide-label reveal">04 — Strategic Assessment</span>
-    <h2 class="slide-title reveal"><span class="accent">SWOT</span> Analysis</h2>
-    <div class="wave-divider reveal"></div>
-    <div class="swot-grid reveal" style="margin-top:24px;">
-      <div class="swot-card s">
-        <h4>Strengths</h4>
-        <ul>
-          <li>200K+ retail outlets via localized brands (Chipsy)</li>
-          <li>Global parent liquidity absorbed sales dips</li>
-          <li>Major Egyptian employer — job creation narrative</li>
-          <li>Diversified portfolio insulates revenue</li>
-        </ul>
-      </div>
-      <div class="swot-card w">
-        <h4>Weaknesses</h4>
-        <ul>
-          <li>Direct SodaStream & Strauss Group ties to Israel</li>
-          <li>Bureaucratic structure killed communication speed</li>
-          <li>Reliance on imported concentrates + devalued EGP</li>
-          <li>Perceived as inherently American brand</li>
-        </ul>
-      </div>
-      <div class="swot-card o">
-        <h4>Opportunities</h4>
-        <ul>
-          <li>Re-localization through CSR & Egyptian identity</li>
-          <li>Direct-to-consumer digital channels (Talabat, etc.)</li>
-          <li>Launch exclusive Egyptian product variants</li>
-        </ul>
-      </div>
-      <div class="swot-card t">
-        <h4>Threats</h4>
-        <ul>
-          <li>Boycott may become permanent behavioral shift</li>
-          <li>Spiro Spathis, V-Cola & Maxi capturing market gap</li>
-          <li>Social media can rekindle outrage anytime</li>
-          <li>Prolonged inflation threatening Egypt operations</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <!-- ==================== SLIDE 6: SURVEY DEMOGRAPHICS ==================== -->
-  <div class="slide" data-slide="5">
-    <div class="bg-noise"></div>
-    <div class="bg-gradient-tr"></div>
-    <img src="img/survey-people.png" alt="Survey respondents" class="slide-img bg-visual">
-    <span class="slide-label reveal">05 — Primary Research</span>
-    <h2 class="slide-title reveal">Survey <span class="accent">Demographics</span></h2>
-    <div class="wave-divider reveal"></div>
-    <p class="body-text reveal" style="text-align:center; margin-bottom:32px;">
-      <strong>58 respondents</strong> — all living in Egypt during the 2023 crisis
-    </p>
-    <div class="stat-row reveal">
-      <div class="stat-card">
-        <div class="stat-number">62%</div>
-        <div class="stat-label">Aged 18–24</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number">31%</div>
-        <div class="stat-label">Under 18</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number">59%</div>
-        <div class="stat-label">Female</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number">41%</div>
-        <div class="stat-label">Male</div>
-      </div>
-    </div>
-    <p class="reveal" style="margin-top:24px; font-size:14px; color:var(--pepsi-gray); text-align:center;">
-      🔑 &nbsp;Boycott participation spanned <strong style="color:var(--pepsi-white)">all age groups, genders & income levels</strong> — driven by emotion, not economics
-    </p>
-  </div>
-
-  <!-- ==================== SLIDE 7: BEHAVIORAL IMPACT ==================== -->
-  <div class="slide" data-slide="6">
-    <div class="bg-noise"></div>
-    <div class="bg-gradient-bl"></div>
-    <img src="img/boycott-cart.png" alt="Boycott symbol" class="slide-img bg-visual" style="opacity:0.1;">
-    <span class="slide-label reveal">06 — Survey Findings</span>
-    <h2 class="slide-title reveal">Behavioral <span class="accent">Impact</span></h2>
-    <div class="wave-divider reveal"></div>
-    <div class="bar-chart reveal" style="margin-top:32px;">
-      <div class="bar-row">
-        <div class="bar-label">Stopped buying completely</div>
-        <div class="bar-track">
-          <div class="bar-fill red" style="--target-width:71%;">
-            <span class="bar-value">71%</span>
-          </div>
-        </div>
-      </div>
-      <div class="bar-row">
-        <div class="bar-label">Reduced buying</div>
-        <div class="bar-track">
-          <div class="bar-fill" style="--target-width:16%;">
-            <span class="bar-value">16%</span>
-          </div>
-        </div>
-      </div>
-      <div class="bar-row">
-        <div class="bar-label">No change in behavior</div>
-        <div class="bar-track">
-          <div class="bar-fill" style="--target-width:9%;">
-            <span class="bar-value">9%</span>
-          </div>
-        </div>
-      </div>
-      <div class="bar-row">
-        <div class="bar-label">Switched to local alternatives</div>
-        <div class="bar-track">
-          <div class="bar-fill gold" style="--target-width:55%;">
-            <span class="bar-value">55%</span>
-          </div>
-        </div>
-      </div>
-      <div class="bar-row">
-        <div class="bar-label">Partially switched</div>
-        <div class="bar-track">
-          <div class="bar-fill gold" style="--target-width:33%;">
-            <span class="bar-value">33%</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <p class="reveal" style="margin-top:24px; font-size:14px; color:var(--pepsi-gray); text-align:center;">
-      <strong style="color:var(--pepsi-red)">87%</strong> of consumers altered their purchasing — <strong style="color:var(--pepsi-white)">88%</strong> switched to local brands
-    </p>
-  </div>
-
-  <!-- ==================== SLIDE 8: WHY THEY BOYCOTTED ==================== -->
-  <div class="slide" data-slide="7">
-    <div class="bg-noise"></div>
-    <div class="bg-gradient-tr"></div>
-    <span class="slide-label reveal">07 — Motivations</span>
-    <h2 class="slide-title reveal">Why Egypt <span class="accent">Boycotted</span></h2>
-    <div class="wave-divider reveal"></div>
-    <div class="donut-container reveal" style="margin-top:32px;">
-      <div class="donut-wrapper">
-        <svg class="donut-svg" viewBox="0 0 180 180">
-          <circle class="donut-circle" cx="90" cy="90" r="80"/>
-          <circle class="donut-progress" cx="90" cy="90" r="80"
-                  stroke="var(--pepsi-blue-glow)"
-                  style="--dash: 397 502;"/>
-        </svg>
-        <div class="donut-center">79%</div>
-      </div>
-      <div class="donut-legend">
-        <div class="legend-item">
-          <div class="legend-dot" style="background:var(--pepsi-blue-glow);"></div>
-          <span><strong style="color:var(--pepsi-white)">79%</strong> — Solidarity with Palestinians</span>
-        </div>
-        <div class="legend-item">
-          <div class="legend-dot" style="background:var(--pepsi-red);"></div>
-          <span><strong style="color:var(--pepsi-white)">5%</strong> — Perceived political/ownership links</span>
-        </div>
-        <div class="legend-item">
-          <div class="legend-dot" style="background:var(--pepsi-gold);"></div>
-          <span><strong style="color:var(--pepsi-white)">5%</strong> — Preference for Egyptian brands</span>
-        </div>
-        <div class="legend-item">
-          <div class="legend-dot" style="background:#22C55E;"></div>
-          <span><strong style="color:var(--pepsi-white)">5%</strong> — Social pressure from peers</span>
-        </div>
-        <div class="legend-item">
-          <div class="legend-dot" style="background:var(--pepsi-gray);"></div>
-          <span><strong style="color:var(--pepsi-white)">6%</strong> — Other / economic reasons</span>
-        </div>
-      </div>
-    </div>
-    <p class="reveal" style="margin-top:28px; font-size:15px; color:var(--pepsi-gray); text-align:center;">
-      The boycott was <strong style="color:var(--pepsi-blue-glow)">emotionally driven</strong> — not economic. PepsiCo's rational response completely missed this.
-    </p>
-  </div>
-
-  <!-- ==================== SLIDE 9: RESPONSE EFFECTIVENESS ==================== -->
-  <div class="slide" data-slide="8">
-    <div class="bg-noise"></div>
-    <div class="bg-gradient-bl"></div>
-    <img src="img/megaphone.png" alt="Failed communication" class="slide-img bg-visual" style="opacity:0.1;">
-    <span class="slide-label reveal">08 — Response Evaluation</span>
-    <h2 class="slide-title reveal">How <span class="accent">Effective</span> Was<br>PepsiCo's Response?</h2>
-    <div class="wave-divider reveal"></div>
-    <div class="reveal" style="margin-top:28px; width:100%; max-width:900px;">
-      <div class="rating-row">
-        <div class="rating-label">Emphasizing local production & jobs</div>
-        <div class="rating-meter">
-          <div class="rating-segment filled"></div>
-          <div class="rating-segment filled"></div>
-          <div class="rating-segment half"></div>
-          <div class="rating-segment"></div>
-          <div class="rating-segment"></div>
-        </div>
-        <div class="rating-score">2.5 / 5</div>
-      </div>
-      <div class="rating-row">
-        <div class="rating-label">Highlighting market commitment</div>
-        <div class="rating-meter">
-          <div class="rating-segment filled"></div>
-          <div class="rating-segment filled"></div>
-          <div class="rating-segment half"></div>
-          <div class="rating-segment"></div>
-          <div class="rating-segment"></div>
-        </div>
-        <div class="rating-score">2.5 / 5</div>
-      </div>
-      <div class="rating-row">
-        <div class="rating-label">Addressing political concerns</div>
-        <div class="rating-meter">
-          <div class="rating-segment filled"></div>
-          <div class="rating-segment filled"></div>
-          <div class="rating-segment"></div>
-          <div class="rating-segment"></div>
-          <div class="rating-segment"></div>
-        </div>
-        <div class="rating-score">2.4 / 5</div>
-      </div>
-      <div class="rating-row">
-        <div class="rating-label">Low-profile approach</div>
-        <div class="rating-meter">
-          <div class="rating-segment filled"></div>
-          <div class="rating-segment filled"></div>
-          <div class="rating-segment"></div>
-          <div class="rating-segment"></div>
-          <div class="rating-segment"></div>
-        </div>
-        <div class="rating-score">2.2 / 5</div>
-      </div>
-      <div class="rating-row">
-        <div class="rating-label">Celebrity endorsement (Mo Salah)</div>
-        <div class="rating-meter">
-          <div class="rating-segment filled"></div>
-          <div class="rating-segment filled"></div>
-          <div class="rating-segment"></div>
-          <div class="rating-segment"></div>
-          <div class="rating-segment"></div>
-        </div>
-        <div class="rating-score">2.3 / 5</div>
-      </div>
-    </div>
-    <div class="stat-row reveal" style="margin-top:28px;">
-      <div class="stat-card">
-        <div class="stat-number red">79%</div>
-        <div class="stat-label">Unaware of any PepsiCo response at all</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number red">2.3</div>
-        <div class="stat-label">Overall effectiveness rating out of 5</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number red">0%</div>
-        <div class="stat-label">Rated the response "Very Effective"</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ==================== SLIDE 10: CRISIS HISTORY ==================== -->
-  <div class="slide" data-slide="9">
-    <div class="bg-noise"></div>
-    <div class="bg-gradient-tr"></div>
-    <span class="slide-label reveal">09 — Historical Context</span>
-    <h2 class="slide-title reveal">PepsiCo's <span class="accent">Crisis</span> History</h2>
-    <div class="wave-divider reveal"></div>
-    <div class="timeline reveal" style="margin-top:40px;">
-      <div class="timeline-item">
-        <div class="timeline-date">1992</div>
-        <div class="timeline-title">Number Fever 🇵🇭</div>
-        <div class="timeline-desc">800K faulty bottle caps in the Philippines — protests, 5 deaths. PepsiCo offered just 500 pesos compensation.</div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-date">1993</div>
-        <div class="timeline-title">Syringe Scare 🇺🇸</div>
-        <div class="timeline-desc">Foreign objects rumored in cans — debunked via factory footage &amp; store surveillance. Trust restored.</div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-date">2003</div>
-        <div class="timeline-title">Pesticide Crisis 🇮🇳</div>
-        <div class="timeline-desc">Toxic residues found 30x above limits. PepsiCo denied, threatened legal action. Lasting reputation damage.</div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-date">2023</div>
-        <div class="timeline-title">Egypt Boycott 🇪🇬</div>
-        <div class="timeline-desc">Solidarity-driven consumer revolt. Emotional crisis met with rational, delayed corporate response.</div>
-      </div>
-    </div>
-    <p class="reveal" style="margin-top:28px; font-size:14px; color:var(--pepsi-gray); text-align:center; max-width:700px;">
+<div class="stat-row reveal" style="margin-top:36px;">
+<div class="stat-card">
+<div class="stat-number">106M</div>
+<div class="stat-label">Egyptian population with deep Palestinian solidarity</div>
+</div>
+<div class="stat-card">
+<div class="stat-number">72%</div>
+<div class="stat-label">Internet penetration accelerating boycott virality</div>
+</div>
+<div class="stat-card">
+<div class="stat-number red">200K+</div>
+<div class="stat-label">Retail outlets impacted by consumer behavioral shift</div>
+</div>
+</div>
+<div class="speaker-name" style="position: absolute; bottom: 30px; left: 40px; font-family: var(--font-mono); font-size: 14px; color: var(--pepsi-gold); font-weight: bold; z-index: 100;">Speaker: Yehia</div></div><div class="slide" data-slide="9">
+<div class="bg-noise"></div>
+<div class="bg-gradient-tr"></div>
+<span class="slide-label reveal">09 — Historical Context</span>
+<h2 class="slide-title reveal">PepsiCo's <span class="accent">Crisis</span> History</h2>
+<div class="wave-divider reveal"></div>
+<div class="timeline reveal" style="margin-top:40px;">
+<div class="timeline-item">
+<div class="timeline-date">1992</div>
+<div class="timeline-title">Number Fever 🇵🇭</div>
+<div class="timeline-desc">800K faulty bottle caps in the Philippines — protests, 5 deaths. PepsiCo offered just 500 pesos compensation.</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-date">1993</div>
+<div class="timeline-title">Syringe Scare 🇺🇸</div>
+<div class="timeline-desc">Foreign objects rumored in cans — debunked via factory footage &amp; store surveillance. Trust restored.</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-date">2003</div>
+<div class="timeline-title">Pesticide Crisis 🇮🇳</div>
+<div class="timeline-desc">Toxic residues found 30x above limits. PepsiCo denied, threatened legal action. Lasting reputation damage.</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-date">2023</div>
+<div class="timeline-title">Egypt Boycott 🇪🇬</div>
+<div class="timeline-desc">Solidarity-driven consumer revolt. Emotional crisis met with rational, delayed corporate response.</div>
+</div>
+</div>
+<p class="reveal" style="margin-top:28px; font-size:14px; color:var(--pepsi-gray); text-align:center; max-width:700px;">
       Pattern: PepsiCo consistently <strong style="color:var(--pepsi-red)">underestimates emotional drivers</strong> and defaults to defensive, economics-focused responses
     </p>
-  </div>
-
-  <!-- ==================== SLIDE 11: SHORTCOMINGS ==================== -->
-  <div class="slide" data-slide="10">
-    <div class="bg-noise"></div>
-    <div class="bg-gradient-bl"></div>
-    <span class="slide-label reveal">10 — Critical Failures</span>
-    <h2 class="slide-title reveal">Three <span class="accent">Fatal</span> Shortcomings</h2>
-    <div class="wave-divider reveal"></div>
-    <div class="shortcoming-row reveal" style="margin-top:32px;">
-      <div class="shortcoming-card">
-        <span class="sc-icon">🎯</span>
-        <h4>Strategy Misalignment</h4>
-        <p>Crisis was <strong style="color:var(--pepsi-white)">emotionally driven</strong> by Palestinian solidarity. PepsiCo responded with <strong style="color:var(--pepsi-white)">rational economic arguments</strong> — "we create jobs" — completely ignoring the emotional core.</p>
-      </div>
-      <div class="shortcoming-card">
-        <span class="sc-icon">📡</span>
-        <h4>Communication Failure</h4>
-        <p><strong style="color:var(--pepsi-white)">79% of consumers</strong> were completely unaware of any response. PepsiCo failed to reach its audience on the platforms where outrage was voiced — TikTok, X, WhatsApp.</p>
-      </div>
-      <div class="shortcoming-card">
-        <span class="sc-icon">🔒</span>
-        <h4>Lack of Transparency</h4>
-        <p>Communication was <strong style="color:var(--pepsi-white)">delayed, vague, and indirect</strong>. Stakeholders couldn't understand the company's stance — trust eroded, misinformation filled the vacuum.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- ==================== SLIDE 12: FUTURE OUTLOOK ==================== -->
-  <div class="slide" data-slide="11">
-    <div class="bg-noise"></div>
-    <div class="bg-gradient-tr"></div>
-    <span class="slide-label reveal">11 — Future Outlook</span>
-    <h2 class="slide-title reveal">Will Consumers <span class="accent">Come Back?</span></h2>
-    <div class="wave-divider reveal"></div>
-    <div class="bar-chart reveal" style="margin-top:32px; max-width:700px;">
-      <div class="bar-row">
-        <div class="bar-label">Very unlikely</div>
-        <div class="bar-track">
-          <div class="bar-fill red" style="--target-width:62%;">
-            <span class="bar-value">62%</span>
-          </div>
-        </div>
-      </div>
-      <div class="bar-row">
-        <div class="bar-label">Not sure</div>
-        <div class="bar-track">
-          <div class="bar-fill" style="--target-width:22%;">
-            <span class="bar-value">22%</span>
-          </div>
-        </div>
-      </div>
-      <div class="bar-row">
-        <div class="bar-label">Somewhat likely</div>
-        <div class="bar-track">
-          <div class="bar-fill" style="--target-width:5%;">
-            <span class="bar-value">5%</span>
-          </div>
-        </div>
-      </div>
-      <div class="bar-row">
-        <div class="bar-label">Very likely</div>
-        <div class="bar-track">
-          <div class="bar-fill" style="--target-width:7%;">
-            <span class="bar-value">7%</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="stat-row reveal" style="margin-top:32px;">
-      <div class="stat-card">
-        <div class="stat-number red">62%</div>
-        <div class="stat-label">Very unlikely to repurchase if crisis recurs</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number gold">60%</div>
-        <div class="stat-label">Demanded a clear public statement above all</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ==================== SLIDE 13: ACTION PLAN ==================== -->
-  <div class="slide" data-slide="12">
-    <div class="bg-noise"></div>
-    <div class="bg-gradient-bl"></div>
-    <img src="img/chess.png" alt="Strategic chess" class="slide-img bg-visual" style="opacity:0.08;">
-    <span class="slide-label reveal">12 — Recommendations</span>
-    <h2 class="slide-title reveal"><span class="accent">Action</span> Plan</h2>
-    <div class="wave-divider reveal"></div>
-    <div class="action-grid reveal" style="margin-top:24px;">
-      <div class="action-card">
-        <span class="num">01</span>
-        <h4>Geopolitical Crisis Task Force</h4>
-        <p>Multi-functional local team — PR, legal, cultural advisors — trained for MENA-specific rapid response, bypassing global bureaucracy</p>
-      </div>
-      <div class="action-card">
-        <span class="num">02</span>
-        <h4>Value-Aligned Public Statements</h4>
-        <p>Shift from defensive "we provide jobs" to empathetic acknowledgement of emotional distress — no corporate PR spin</p>
-      </div>
-      <div class="action-card">
-        <span class="num">03</span>
-        <h4>Hyper-Localized Communication</h4>
-        <p>Deploy messaging on TikTok & X via empathetic Egyptian spokespersons — replace faceless corporate press releases</p>
-      </div>
-      <div class="action-card">
-        <span class="num">04</span>
-        <h4>Tangible Community Initiatives</h4>
-        <p>Launch unbranded humanitarian support in Egypt & Palestine — actions over press releases, goodwill through deeds</p>
-      </div>
-      <div class="action-card">
-        <span class="num">05</span>
-        <h4>Divest from Controversial Ties</h4>
-        <p>Sell SodaStream, end Strauss Group equity — create a neutral stance that doesn't fund occupation or alienate MENA buyers</p>
-      </div>
-      <div class="action-card">
-        <span class="num">06</span>
-        <h4>Post-Crisis Social Listening</h4>
-        <p>Sophisticated monitoring tools to detect early boycott signals — preemptive mitigation before virality</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- ==================== SLIDE 14: CRISIS MATRIX ==================== -->
-  <div class="slide" data-slide="13">
-    <div class="bg-noise"></div>
-    <span class="slide-label reveal">13 — Crisis Management Matrix</span>
-    <h2 class="slide-title reveal" style="font-size:clamp(28px,3.5vw,52px);">Five-Phase <span class="accent">Response</span> Framework</h2>
-    <div class="wave-divider reveal"></div>
-    <div class="matrix-grid reveal" style="margin-top:20px;">
-      <div class="matrix-cell matrix-header">Prevention</div>
-      <div class="matrix-cell matrix-header">Detection</div>
-      <div class="matrix-cell matrix-header">Alleviate</div>
-      <div class="matrix-cell matrix-header">Restart</div>
-      <div class="matrix-cell matrix-header">Learning</div>
-
-      <div class="matrix-cell">Scrutinize brand affiliations & monitor geopolitical risks in MENA</div>
-      <div class="matrix-cell">Sentiment drops, immediate boycott, daily sales decline detected</div>
-      <div class="matrix-cell">Emergency task force activated upon boycott list circulation</div>
-      <div class="matrix-cell">Recovery strategy: deep Egyptian & Arab market commitment messaging</div>
-      <div class="matrix-cell">Continuous geopolitical risk assessments for regional supply chains</div>
-
-      <div class="matrix-cell">Local PR & Regional Risk Assessment officers assigned</div>
-      <div class="matrix-cell">Rapid virality of boycott narratives on social platforms tracked</div>
-      <div class="matrix-cell">Real-time sales mapping & social media outrage source analysis</div>
-      <div class="matrix-cell">Identify which local CSR narratives resonate without seeming defensive</div>
-      <div class="matrix-cell">Post-crisis case study compilation for organizational guidelines</div>
-
-      <div class="matrix-cell">Pre-train employees on brand-neutrality protocols</div>
-      <div class="matrix-cell">Internal leadership alerted; holding statements drafted</div>
-      <div class="matrix-cell">Empathetic, culturally aligned public statements within 24–48 hrs</div>
-      <div class="matrix-cell">Gradual media re-engagement with value-driven community initiatives</div>
-      <div class="matrix-cell">Institutionalize a rapid-response geopolitical playbook</div>
-    </div>
-  </div>
-
-  <!-- ==================== SLIDE 15: CONCLUSION ==================== -->
-  <div class="slide slide-title-bg" data-slide="14">
-    <div class="bg-globe"></div>
-    <div class="bg-noise"></div>
-    <div class="bg-gradient-bl"></div>
-    <div class="bg-gradient-tr"></div>
-    <img src="img/solidarity.png" alt="Solidarity heart" class="slide-img hero" style="opacity:0.2;">
-    <span class="slide-label reveal">Conclusion</span>
-    <h2 class="slide-title reveal" style="font-size:clamp(32px, 5vw, 64px); text-align:center;">
-      In Crisis, <span class="accent">Empathy</span><br>Outperforms Economics
+<div class="speaker-name" style="position: absolute; bottom: 30px; left: 40px; font-family: var(--font-mono); font-size: 14px; color: var(--pepsi-gold); font-weight: bold; z-index: 100;">Speaker: Farah</div></div><div class="slide" data-slide="2">
+<div class="bg-noise"></div>
+<div class="bg-gradient-tr"></div>
+<span class="slide-label reveal">02 — Crisis Timeline</span>
+<h2 class="slide-title reveal">The <span class="accent">Domino Effect</span></h2>
+<div class="wave-divider reveal"></div>
+<div class="timeline reveal" style="margin-top:40px;">
+<div class="timeline-item">
+<div class="timeline-date">2018</div>
+<div class="timeline-title">SodaStream Acquisition</div>
+<div class="timeline-desc">PepsiCo acquires SodaStream for $3.2B — later cited as direct Israeli corporate link</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-date">OCT 2023</div>
+<div class="timeline-title">Crisis Ignites</div>
+<div class="timeline-desc">Boycott lists go viral on TikTok, WhatsApp &amp; X within hours of conflict escalation</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-date">Q4 2023</div>
+<div class="timeline-title">Sales Collapse</div>
+<div class="timeline-desc">71% of surveyed consumers stopped purchasing PepsiCo products completely</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-date">2024+</div>
+<div class="timeline-title">Long-Tail Impact</div>
+<div class="timeline-desc">62% remain "very unlikely" to repurchase — local brands fill the vacuum</div>
+</div>
+</div>
+<div class="speaker-name" style="position: absolute; bottom: 30px; left: 40px; font-family: var(--font-mono); font-size: 14px; color: var(--pepsi-gold); font-weight: bold; z-index: 100;">Speaker: Janah</div></div><div class="slide" data-slide="3">
+<div class="bg-noise"></div>
+<span class="slide-label reveal">03 — Macro Environment</span>
+<h2 class="slide-title reveal"><span class="accent">PESTLE</span> Analysis</h2>
+<div class="wave-divider reveal"></div>
+<div class="pestle-grid reveal" style="margin-top:24px;">
+<div class="pestle-card">
+<span class="icon">🏛️</span>
+<h4>Political</h4>
+<p>Egypt maintained <strong>public neutrality</strong> while PepsiCo's SodaStream &amp; Strauss Group ties made it a primary boycott target</p>
+</div>
+<div class="pestle-card">
+<span class="icon">📉</span>
+<h4>Economic</h4>
+<p><strong>11% inflation</strong> &amp; pound devaluation — consumers already strained, switching to cheaper local alternatives was effortless</p>
+</div>
+<div class="pestle-card">
+<span class="icon">✊</span>
+<h4>Social</h4>
+<p>Young, digitally native population with <strong>deep Palestinian solidarity</strong> — boycotting became cultural identity</p>
+</div>
+<div class="pestle-card">
+<span class="icon">📱</span>
+<h4>Technological</h4>
+<p>Boycott lists went <strong>viral in hours</strong> via TikTok, WhatsApp &amp; X — outpacing any corporate response</p>
+</div>
+<div class="pestle-card">
+<span class="icon">⚖️</span>
+<h4>Legal</h4>
+<p>No formal legislation banning products, but <strong>institutional backing</strong> of boycotts through unions and syndicates</p>
+</div>
+<div class="pestle-card">
+<span class="icon">🌍</span>
+<h4>Environmental</h4>
+<p>Sustainability narratives weakened as consumers prioritized <strong>ethical sourcing over eco-claims</strong></p>
+</div>
+</div>
+<div class="speaker-name" style="position: absolute; bottom: 30px; left: 40px; font-family: var(--font-mono); font-size: 14px; color: var(--pepsi-gold); font-weight: bold; z-index: 100;">Speaker: Yehia</div></div><div class="slide" data-slide="4">
+<div class="bg-noise"></div>
+<div class="bg-gradient-bl"></div>
+<img alt="SWOT Compass" class="slide-img bg-visual" src="img/swot-compass.png" style="opacity:0.08;"/>
+<span class="slide-label reveal">04 — Strategic Assessment</span>
+<h2 class="slide-title reveal"><span class="accent">SWOT</span> Analysis</h2>
+<div class="wave-divider reveal"></div>
+<div class="swot-grid reveal" style="margin-top:24px;">
+<div class="swot-card s">
+<h4>Strengths</h4>
+<ul>
+<li>200K+ retail outlets via localized brands (Chipsy)</li>
+<li>Global parent liquidity absorbed sales dips</li>
+<li>Major Egyptian employer — job creation narrative</li>
+<li>Diversified portfolio insulates revenue</li>
+</ul>
+</div>
+<div class="swot-card w">
+<h4>Weaknesses</h4>
+<ul>
+<li>Direct SodaStream &amp; Strauss Group ties to Israel</li>
+<li>Bureaucratic structure killed communication speed</li>
+<li>Reliance on imported concentrates + devalued EGP</li>
+<li>Perceived as inherently American brand</li>
+</ul>
+</div>
+<div class="swot-card o">
+<h4>Opportunities</h4>
+<ul>
+<li>Re-localization through CSR &amp; Egyptian identity</li>
+<li>Direct-to-consumer digital channels (Talabat, etc.)</li>
+<li>Launch exclusive Egyptian product variants</li>
+</ul>
+</div>
+<div class="swot-card t">
+<h4>Threats</h4>
+<ul>
+<li>Boycott may become permanent behavioral shift</li>
+<li>Spiro Spathis, V-Cola &amp; Maxi capturing market gap</li>
+<li>Social media can rekindle outrage anytime</li>
+<li>Prolonged inflation threatening Egypt operations</li>
+</ul>
+</div>
+</div>
+<div class="speaker-name" style="position: absolute; bottom: 30px; left: 40px; font-family: var(--font-mono); font-size: 14px; color: var(--pepsi-gold); font-weight: bold; z-index: 100;">Speaker: Yehia</div></div><div class="slide" data-slide="5">
+<div class="bg-noise"></div>
+<div class="bg-gradient-tr"></div>
+<img alt="Survey respondents" class="slide-img bg-visual" src="img/survey-people.png"/>
+<span class="slide-label reveal">05 — Primary Research</span>
+<h2 class="slide-title reveal">Survey <span class="accent">Demographics</span></h2>
+<div class="wave-divider reveal"></div>
+<p class="body-text reveal" style="text-align:center; margin-bottom:32px;">
+<strong>58 respondents</strong> — all living in Egypt during the 2023 crisis
+    </p>
+<div class="stat-row reveal">
+<div class="stat-card">
+<div class="stat-number">62%</div>
+<div class="stat-label">Aged 18–24</div>
+</div>
+<div class="stat-card">
+<div class="stat-number">31%</div>
+<div class="stat-label">Under 18</div>
+</div>
+<div class="stat-card">
+<div class="stat-number">59%</div>
+<div class="stat-label">Female</div>
+</div>
+<div class="stat-card">
+<div class="stat-number">41%</div>
+<div class="stat-label">Male</div>
+</div>
+</div>
+<p class="reveal" style="margin-top:24px; font-size:14px; color:var(--pepsi-gray); text-align:center;">
+      🔑  Boycott participation spanned <strong style="color:var(--pepsi-white)">all age groups, genders &amp; income levels</strong> — driven by emotion, not economics
+    </p>
+<div class="speaker-name" style="position: absolute; bottom: 30px; left: 40px; font-family: var(--font-mono); font-size: 14px; color: var(--pepsi-gold); font-weight: bold; z-index: 100;">Speaker: Farah</div></div><div class="slide" data-slide="6">
+<div class="bg-noise"></div>
+<div class="bg-gradient-bl"></div>
+<img alt="Boycott symbol" class="slide-img bg-visual" src="img/boycott-cart.png" style="opacity:0.1;"/>
+<span class="slide-label reveal">06 — Survey Findings</span>
+<h2 class="slide-title reveal">Behavioral <span class="accent">Impact</span></h2>
+<div class="wave-divider reveal"></div>
+<div class="bar-chart reveal" style="margin-top:32px;">
+<div class="bar-row">
+<div class="bar-label">Stopped buying completely</div>
+<div class="bar-track">
+<div class="bar-fill red" style="--target-width:71%;">
+<span class="bar-value">71%</span>
+</div>
+</div>
+</div>
+<div class="bar-row">
+<div class="bar-label">Reduced buying</div>
+<div class="bar-track">
+<div class="bar-fill" style="--target-width:16%;">
+<span class="bar-value">16%</span>
+</div>
+</div>
+</div>
+<div class="bar-row">
+<div class="bar-label">No change in behavior</div>
+<div class="bar-track">
+<div class="bar-fill" style="--target-width:9%;">
+<span class="bar-value">9%</span>
+</div>
+</div>
+</div>
+<div class="bar-row">
+<div class="bar-label">Switched to local alternatives</div>
+<div class="bar-track">
+<div class="bar-fill gold" style="--target-width:55%;">
+<span class="bar-value">55%</span>
+</div>
+</div>
+</div>
+<div class="bar-row">
+<div class="bar-label">Partially switched</div>
+<div class="bar-track">
+<div class="bar-fill gold" style="--target-width:33%;">
+<span class="bar-value">33%</span>
+</div>
+</div>
+</div>
+</div>
+<p class="reveal" style="margin-top:24px; font-size:14px; color:var(--pepsi-gray); text-align:center;">
+<strong style="color:var(--pepsi-red)">87%</strong> of consumers altered their purchasing — <strong style="color:var(--pepsi-white)">88%</strong> switched to local brands
+    </p>
+<div class="speaker-name" style="position: absolute; bottom: 30px; left: 40px; font-family: var(--font-mono); font-size: 14px; color: var(--pepsi-gold); font-weight: bold; z-index: 100;">Speaker: Farah</div></div><div class="slide" data-slide="7">
+<div class="bg-noise"></div>
+<div class="bg-gradient-tr"></div>
+<span class="slide-label reveal">07 — Motivations</span>
+<h2 class="slide-title reveal">Why Egypt <span class="accent">Boycotted</span></h2>
+<div class="wave-divider reveal"></div>
+<div class="donut-container reveal" style="margin-top:32px;">
+<div class="donut-wrapper">
+<svg class="donut-svg" viewbox="0 0 180 180">
+<circle class="donut-circle" cx="90" cy="90" r="80"></circle>
+<circle class="donut-progress" cx="90" cy="90" r="80" stroke="var(--pepsi-blue-glow)" style="--dash: 397 502;"></circle>
+</svg>
+<div class="donut-center">79%</div>
+</div>
+<div class="donut-legend">
+<div class="legend-item">
+<div class="legend-dot" style="background:var(--pepsi-blue-glow);"></div>
+<span><strong style="color:var(--pepsi-white)">79%</strong> — Solidarity with Palestinians</span>
+</div>
+<div class="legend-item">
+<div class="legend-dot" style="background:var(--pepsi-red);"></div>
+<span><strong style="color:var(--pepsi-white)">5%</strong> — Perceived political/ownership links</span>
+</div>
+<div class="legend-item">
+<div class="legend-dot" style="background:var(--pepsi-gold);"></div>
+<span><strong style="color:var(--pepsi-white)">5%</strong> — Preference for Egyptian brands</span>
+</div>
+<div class="legend-item">
+<div class="legend-dot" style="background:#22C55E;"></div>
+<span><strong style="color:var(--pepsi-white)">5%</strong> — Social pressure from peers</span>
+</div>
+<div class="legend-item">
+<div class="legend-dot" style="background:var(--pepsi-gray);"></div>
+<span><strong style="color:var(--pepsi-white)">6%</strong> — Other / economic reasons</span>
+</div>
+</div>
+</div>
+<p class="reveal" style="margin-top:28px; font-size:15px; color:var(--pepsi-gray); text-align:center;">
+      The boycott was <strong style="color:var(--pepsi-blue-glow)">emotionally driven</strong> — not economic. PepsiCo's rational response completely missed this.
+    </p>
+<div class="speaker-name" style="position: absolute; bottom: 30px; left: 40px; font-family: var(--font-mono); font-size: 14px; color: var(--pepsi-gold); font-weight: bold; z-index: 100;">Speaker: Farah</div></div><div class="slide" data-slide="8">
+<div class="bg-noise"></div>
+<div class="bg-gradient-bl"></div>
+<img alt="Failed communication" class="slide-img bg-visual" src="img/megaphone.png" style="opacity:0.1;"/>
+<span class="slide-label reveal">08 — Response Evaluation</span>
+<h2 class="slide-title reveal">How <span class="accent">Effective</span> Was<br/>PepsiCo's Response?</h2>
+<div class="wave-divider reveal"></div>
+<div class="reveal" style="margin-top:28px; width:100%; max-width:900px;">
+<div class="rating-row">
+<div class="rating-label">Emphasizing local production &amp; jobs</div>
+<div class="rating-meter">
+<div class="rating-segment filled"></div>
+<div class="rating-segment filled"></div>
+<div class="rating-segment half"></div>
+<div class="rating-segment"></div>
+<div class="rating-segment"></div>
+</div>
+<div class="rating-score">2.5 / 5</div>
+</div>
+<div class="rating-row">
+<div class="rating-label">Highlighting market commitment</div>
+<div class="rating-meter">
+<div class="rating-segment filled"></div>
+<div class="rating-segment filled"></div>
+<div class="rating-segment half"></div>
+<div class="rating-segment"></div>
+<div class="rating-segment"></div>
+</div>
+<div class="rating-score">2.5 / 5</div>
+</div>
+<div class="rating-row">
+<div class="rating-label">Addressing political concerns</div>
+<div class="rating-meter">
+<div class="rating-segment filled"></div>
+<div class="rating-segment filled"></div>
+<div class="rating-segment"></div>
+<div class="rating-segment"></div>
+<div class="rating-segment"></div>
+</div>
+<div class="rating-score">2.4 / 5</div>
+</div>
+<div class="rating-row">
+<div class="rating-label">Low-profile approach</div>
+<div class="rating-meter">
+<div class="rating-segment filled"></div>
+<div class="rating-segment filled"></div>
+<div class="rating-segment"></div>
+<div class="rating-segment"></div>
+<div class="rating-segment"></div>
+</div>
+<div class="rating-score">2.2 / 5</div>
+</div>
+<div class="rating-row">
+<div class="rating-label">Celebrity endorsement (Mo Salah)</div>
+<div class="rating-meter">
+<div class="rating-segment filled"></div>
+<div class="rating-segment filled"></div>
+<div class="rating-segment"></div>
+<div class="rating-segment"></div>
+<div class="rating-segment"></div>
+</div>
+<div class="rating-score">2.3 / 5</div>
+</div>
+</div>
+<div class="stat-row reveal" style="margin-top:28px;">
+<div class="stat-card">
+<div class="stat-number red">79%</div>
+<div class="stat-label">Unaware of any PepsiCo response at all</div>
+</div>
+<div class="stat-card">
+<div class="stat-number red">2.3</div>
+<div class="stat-label">Overall effectiveness rating out of 5</div>
+</div>
+<div class="stat-card">
+<div class="stat-number red">0%</div>
+<div class="stat-label">Rated the response "Very Effective"</div>
+</div>
+</div>
+<div class="speaker-name" style="position: absolute; bottom: 30px; left: 40px; font-family: var(--font-mono); font-size: 14px; color: var(--pepsi-gold); font-weight: bold; z-index: 100;">Speaker: Janah</div></div><div class="slide" data-slide="11">
+<div class="bg-noise"></div>
+<div class="bg-gradient-tr"></div>
+<span class="slide-label reveal">11 — Future Outlook</span>
+<h2 class="slide-title reveal">Will Consumers <span class="accent">Come Back?</span></h2>
+<div class="wave-divider reveal"></div>
+<div class="bar-chart reveal" style="margin-top:32px; max-width:700px;">
+<div class="bar-row">
+<div class="bar-label">Very unlikely</div>
+<div class="bar-track">
+<div class="bar-fill red" style="--target-width:62%;">
+<span class="bar-value">62%</span>
+</div>
+</div>
+</div>
+<div class="bar-row">
+<div class="bar-label">Not sure</div>
+<div class="bar-track">
+<div class="bar-fill" style="--target-width:22%;">
+<span class="bar-value">22%</span>
+</div>
+</div>
+</div>
+<div class="bar-row">
+<div class="bar-label">Somewhat likely</div>
+<div class="bar-track">
+<div class="bar-fill" style="--target-width:5%;">
+<span class="bar-value">5%</span>
+</div>
+</div>
+</div>
+<div class="bar-row">
+<div class="bar-label">Very likely</div>
+<div class="bar-track">
+<div class="bar-fill" style="--target-width:7%;">
+<span class="bar-value">7%</span>
+</div>
+</div>
+</div>
+</div>
+<div class="stat-row reveal" style="margin-top:32px;">
+<div class="stat-card">
+<div class="stat-number red">62%</div>
+<div class="stat-label">Very unlikely to repurchase if crisis recurs</div>
+</div>
+<div class="stat-card">
+<div class="stat-number gold">60%</div>
+<div class="stat-label">Demanded a clear public statement above all</div>
+</div>
+</div>
+<div class="speaker-name" style="position: absolute; bottom: 30px; left: 40px; font-family: var(--font-mono); font-size: 14px; color: var(--pepsi-gold); font-weight: bold; z-index: 100;">Speaker: Janah</div></div><div class="slide" data-slide="10">
+<div class="bg-noise"></div>
+<div class="bg-gradient-bl"></div>
+<span class="slide-label reveal">10 — Critical Failures</span>
+<h2 class="slide-title reveal">Three <span class="accent">Fatal</span> Shortcomings</h2>
+<div class="wave-divider reveal"></div>
+<div class="shortcoming-row reveal" style="margin-top:32px;">
+<div class="shortcoming-card">
+<span class="sc-icon">🎯</span>
+<h4>Strategy Misalignment</h4>
+<p>Crisis was <strong style="color:var(--pepsi-white)">emotionally driven</strong> by Palestinian solidarity. PepsiCo responded with <strong style="color:var(--pepsi-white)">rational economic arguments</strong> — "we create jobs" — completely ignoring the emotional core.</p>
+</div>
+<div class="shortcoming-card">
+<span class="sc-icon">📡</span>
+<h4>Communication Failure</h4>
+<p><strong style="color:var(--pepsi-white)">79% of consumers</strong> were completely unaware of any response. PepsiCo failed to reach its audience on the platforms where outrage was voiced — TikTok, X, WhatsApp.</p>
+</div>
+<div class="shortcoming-card">
+<span class="sc-icon">🔒</span>
+<h4>Lack of Transparency</h4>
+<p>Communication was <strong style="color:var(--pepsi-white)">delayed, vague, and indirect</strong>. Stakeholders couldn't understand the company's stance — trust eroded, misinformation filled the vacuum.</p>
+</div>
+</div>
+<div class="speaker-name" style="position: absolute; bottom: 30px; left: 40px; font-family: var(--font-mono); font-size: 14px; color: var(--pepsi-gold); font-weight: bold; z-index: 100;">Speaker: Janah</div></div><div class="slide" data-slide="12">
+<div class="bg-noise"></div>
+<div class="bg-gradient-bl"></div>
+<img alt="Strategic chess" class="slide-img bg-visual" src="img/chess.png" style="opacity:0.08;"/>
+<span class="slide-label reveal">12 — Recommendations</span>
+<h2 class="slide-title reveal"><span class="accent">Action</span> Plan</h2>
+<div class="wave-divider reveal"></div>
+<div class="action-grid reveal" style="margin-top:24px;">
+<div class="action-card">
+<span class="num">01</span>
+<h4>Geopolitical Crisis Task Force</h4>
+<p>Multi-functional local team — PR, legal, cultural advisors — trained for MENA-specific rapid response, bypassing global bureaucracy</p>
+</div>
+<div class="action-card">
+<span class="num">02</span>
+<h4>Value-Aligned Public Statements</h4>
+<p>Shift from defensive "we provide jobs" to empathetic acknowledgement of emotional distress — no corporate PR spin</p>
+</div>
+<div class="action-card">
+<span class="num">03</span>
+<h4>Hyper-Localized Communication</h4>
+<p>Deploy messaging on TikTok &amp; X via empathetic Egyptian spokespersons — replace faceless corporate press releases</p>
+</div>
+<div class="action-card">
+<span class="num">04</span>
+<h4>Tangible Community Initiatives</h4>
+<p>Launch unbranded humanitarian support in Egypt &amp; Palestine — actions over press releases, goodwill through deeds</p>
+</div>
+<div class="action-card">
+<span class="num">05</span>
+<h4>Divest from Controversial Ties</h4>
+<p>Sell SodaStream, end Strauss Group equity — create a neutral stance that doesn't fund occupation or alienate MENA buyers</p>
+</div>
+<div class="action-card">
+<span class="num">06</span>
+<h4>Post-Crisis Social Listening</h4>
+<p>Sophisticated monitoring tools to detect early boycott signals — preemptive mitigation before virality</p>
+</div>
+</div>
+<div class="speaker-name" style="position: absolute; bottom: 30px; left: 40px; font-family: var(--font-mono); font-size: 14px; color: var(--pepsi-gold); font-weight: bold; z-index: 100;">Speaker: Yehia</div></div><div class="slide" data-slide="13">
+<div class="bg-noise"></div>
+<span class="slide-label reveal">13 — Crisis Management Matrix</span>
+<h2 class="slide-title reveal" style="font-size:clamp(28px,3.5vw,52px);">Five-Phase <span class="accent">Response</span> Framework</h2>
+<div class="wave-divider reveal"></div>
+<div class="matrix-grid reveal" style="margin-top:20px;">
+<div class="matrix-cell matrix-header">Prevention</div>
+<div class="matrix-cell matrix-header">Detection</div>
+<div class="matrix-cell matrix-header">Alleviate</div>
+<div class="matrix-cell matrix-header">Restart</div>
+<div class="matrix-cell matrix-header">Learning</div>
+<div class="matrix-cell">Scrutinize brand affiliations &amp; monitor geopolitical risks in MENA</div>
+<div class="matrix-cell">Sentiment drops, immediate boycott, daily sales decline detected</div>
+<div class="matrix-cell">Emergency task force activated upon boycott list circulation</div>
+<div class="matrix-cell">Recovery strategy: deep Egyptian &amp; Arab market commitment messaging</div>
+<div class="matrix-cell">Continuous geopolitical risk assessments for regional supply chains</div>
+<div class="matrix-cell">Local PR &amp; Regional Risk Assessment officers assigned</div>
+<div class="matrix-cell">Rapid virality of boycott narratives on social platforms tracked</div>
+<div class="matrix-cell">Real-time sales mapping &amp; social media outrage source analysis</div>
+<div class="matrix-cell">Identify which local CSR narratives resonate without seeming defensive</div>
+<div class="matrix-cell">Post-crisis case study compilation for organizational guidelines</div>
+<div class="matrix-cell">Pre-train employees on brand-neutrality protocols</div>
+<div class="matrix-cell">Internal leadership alerted; holding statements drafted</div>
+<div class="matrix-cell">Empathetic, culturally aligned public statements within 24–48 hrs</div>
+<div class="matrix-cell">Gradual media re-engagement with value-driven community initiatives</div>
+<div class="matrix-cell">Institutionalize a rapid-response geopolitical playbook</div>
+</div>
+<div class="speaker-name" style="position: absolute; bottom: 30px; left: 40px; font-family: var(--font-mono); font-size: 14px; color: var(--pepsi-gold); font-weight: bold; z-index: 100;">Speaker: Yehia</div></div><div class="slide" data-slide="14">
+<div class="bg-globe"></div>
+<div class="bg-noise"></div>
+<div class="bg-gradient-bl"></div>
+<div class="bg-gradient-tr"></div>
+<img alt="Solidarity heart" class="slide-img hero" src="img/solidarity.png" style="opacity:0.2;"/>
+<span class="slide-label reveal">Conclusion</span>
+<h2 class="slide-title reveal" style="font-size:clamp(32px, 5vw, 64px); text-align:center;">
+      In Crisis, <span class="accent">Empathy</span><br/>Outperforms Economics
     </h2>
-    <div class="wave-divider reveal"></div>
-    <p class="body-text reveal" style="text-align:center;">
-      PepsiCo's 2023 Egypt boycott was not a failure of product or pricing —<br>
-      it was a failure of <strong>emotional intelligence</strong>. When consumers act from<br>
+<div class="wave-divider reveal"></div>
+<p class="body-text reveal" style="text-align:center;">
+      PepsiCo's 2023 Egypt boycott was not a failure of product or pricing —<br/>
+      it was a failure of <strong>emotional intelligence</strong>. When consumers act from<br/>
       the heart, brands must respond from the heart.
     </p>
-    <div class="stat-row reveal" style="margin-top:36px;">
-      <div class="stat-card" style="border-color: rgba(227,38,54,0.3);">
-        <div class="stat-number red" style="font-size:28px; line-height:1.3;">RATIONAL<br>RESPONSE</div>
-        <div class="stat-label" style="margin-top:8px;">"We provide 200K+ jobs"<br>→ Nobody cared</div>
-      </div>
-      <div class="stat-card" style="border-color: rgba(0,115,207,0.3);">
-        <div class="stat-number" style="font-size:28px; line-height:1.3;">WHAT WAS<br>NEEDED</div>
-        <div class="stat-label" style="margin-top:8px;">Empathetic acknowledgement<br>→ Tangible community action</div>
-      </div>
-    </div>
-    <p class="reveal" style="margin-top:36px; font-family:var(--font-mono); font-size:13px; color:var(--pepsi-gray);">
+<div class="stat-row reveal" style="margin-top:36px;">
+<div class="stat-card" style="border-color: rgba(227,38,54,0.3);">
+<div class="stat-number red" style="font-size:28px; line-height:1.3;">RATIONAL<br/>RESPONSE</div>
+<div class="stat-label" style="margin-top:8px;">"We provide 200K+ jobs"<br/>→ Nobody cared</div>
+</div>
+<div class="stat-card" style="border-color: rgba(0,115,207,0.3);">
+<div class="stat-number" style="font-size:28px; line-height:1.3;">WHAT WAS<br/>NEEDED</div>
+<div class="stat-label" style="margin-top:8px;">Empathetic acknowledgement<br/>→ Tangible community action</div>
+</div>
+</div>
+<p class="reveal" style="margin-top:36px; font-family:var(--font-mono); font-size:13px; color:var(--pepsi-gray);">
       Thank you.
     </p>
-  </div>
-
-</div>
-
+<div class="speaker-name" style="position: absolute; bottom: 30px; left: 40px; font-family: var(--font-mono); font-size: 14px; color: var(--pepsi-gold); font-weight: bold; z-index: 100;">Speaker: Farah</div></div></div>
 <!-- ============ NAVIGATION BAR ============ -->
 <div class="nav-bar">
-  <button class="nav-btn" id="prevBtn" aria-label="Previous slide">‹</button>
-  <div class="nav-dots" id="navDots"></div>
-  <button class="nav-btn" id="nextBtn" aria-label="Next slide">›</button>
-  <div class="slide-counter" id="slideCounter">1 / 15</div>
+<button aria-label="Previous slide" class="nav-btn" id="prevBtn">‹</button>
+<div class="nav-dots" id="navDots"></div>
+<button aria-label="Next slide" class="nav-btn" id="nextBtn">›</button>
+<div class="slide-counter" id="slideCounter">1 / 15</div>
 </div>
-
 <script>
 (() => {
   const slides = document.querySelectorAll('.slide');
@@ -1529,7 +1475,6 @@ h3.section-subtitle {
   });
 })();
 </script>
-
 <!-- ============ THREE.JS PEPSI CAN ============ -->
 <script>
 (() => {
@@ -1827,6 +1772,5 @@ h3.section-subtitle {
   animate();
 })();
 </script>
-
 </body>
 </html>
